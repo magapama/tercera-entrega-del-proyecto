@@ -1,0 +1,192 @@
+//definir variables
+
+//colores
+$mainColor: rgba(102,171,185, .5);
+$secondaryColor: rgba(204,221,229, .5);
+$keyColor:rgb(7,71,104);
+$keyColor2: rgba(7,71,104, .5);
+$keyColor3: rgb(102,171,185);
+$lighten: 5;
+$darken: 25;
+$darkNavy: rgb(7,71,104);
+$darkNavyLight: rgba(7,71,104, .5);
+$blowinMikoza: rgb(59,160,181);
+$blowinMikozaLight: rgba(59,160,181, .5);
+$norge: rgb(102,171,185);
+$norgeLight: rgba(102,171,185, .5);
+$malayaSky: rgb(204,221,229);
+$malayaSkyLight: rgba(204,221,229, .5);
+$jaggedIce: rgb(208,238,234);
+$jaggedIceLight: rgba(208,238,234, .5);
+$list1: $malayaSkyLight, whitesmoke;
+$list2: $darkNavyLight, $darken;
+$list3:$darkNavyLight, $darkNavy;
+//sizing
+$w-100: 100%;
+$w-75: 75%;
+$w-50: 50%;
+$w-25: 25%;
+$w-20: 20%;
+
+
+//map
+$paleta:( 
+    'darkNavy': rgb(7,71,104),
+    'darkNavyLight': rgba(7,71,104, .5),
+    'blowinMikoza': rgb(59,160,181),
+    'blowinMikozaLight': rgba(59,160,181, .5),
+    'norge': rgb(102,171,185),
+    'norgeLight': rgba(102,171,185, .5),
+    'malayaSky': rgb(204,221,229),
+    'malayaSkyLight': rgba(204,221,229, .5),
+    'jaggedIce': rgb(208,238,234),
+    'jaggedIceLight': rgba(208,238,234, .5),
+);
+.bg-parrafo{
+    background-color: map-get($map: $paleta, $key: 'malayaSky');
+}
+.bg-pie{
+    background-color: map-get($map: $paleta, $key:'darkNavyLight' );
+    h3{
+        font-size: 1rem;
+        color: rgb(204,221,229);
+    }
+}
+//extend
+.btn-gral{
+    background-color: $keyColor3;
+    border: none;
+    padding: 15px 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    align-content: center;
+    justify-content:center;
+    align-items: center;
+    font-size: 1rem;
+    font-style: bold;
+    vertical-align:middle;
+    box-sizing: border-box;
+    color: whitesmoke;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.btn-rounded:hover{
+    @extend .btn-gral;
+    border-radius: 8px;
+    background-color: map-get($map: $paleta, $key: 'darkNavyLight');
+    cursor: pointer;    
+}
+// .btn-rounded{
+//     @extend .btn-gral;
+//     border-radius: 8px;
+//     &hover{
+//         background-color: map-get($map: $paleta, $key: 'dos');
+//         cursor: pointer;
+//     }
+// }
+.img-gral-border{
+    border-color: blue;
+    border-radius: 5px;
+}
+.img-border-punto{
+    @extend .img-gral-border;
+    border-style: dotted;
+    border-color: $keyColor2, $lighten;
+}
+.textH2{
+    color: $mainColor;
+    font-size: 2.5rem;
+}
+.textItalic{
+    @extend .textH2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    text-decoration: underline;
+}
+//mixin
+@mixin flex ($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;    
+}
+.containerFlex{
+    @include flex(center, center);
+}
+
+@mixin parrafo ($font-size, $line-height, $color, $text-align) {
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    text-align: $text-align;
+    padding: 2px;    
+}
+.parrafo{
+    @include parrafo(16px, 0.5rem, rgb(59,160,181), justify);
+}
+
+@mixin textoH3 ($font-size, $color,$text-align) {
+    font-size: $font-size;
+    color: $color;
+    text-align: $text-align;
+    margin: 15px;
+    padding: 10px;
+}
+.textoH3{
+    @include textoH3(2.1rem,rgb(7,71,104) , center)
+}
+    
+@mixin gradient ($direction, $list) {
+    direction: $direction;
+    list: $list;
+    background: linear-gradient($direction, $list);    
+}
+.gradiente{
+    @include gradient(to left, $list1);
+}
+.gradiente2:hover{
+    @include gradient(to top,$list2);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 5s;
+}
+
+.gradiente3:hover{
+        @include gradient(to left,$list3);        
+            color: whitesmoke;
+            cursor: pointer;
+            transition: all 5s;         
+    }
+.transform:hover{
+    transform: translate(20px, -50px);
+    cursor: pointer;
+}
+.scale:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform (3s);
+}
+@keyframes textAlpha{
+    from{opacity: 0}
+    to{ opacity: 1}
+}  
+h2, img, #form{
+    animation-name: textAlpha;
+    animation-duration: 5s;
+}
+figcaption::first-line{
+    color: rgb(59,160,181);
+}
+figcaption::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(59,160,181);
+}
+p::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+    

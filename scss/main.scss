@@ -1,0 +1,17 @@
+//traigo los imports
+@import "_reset";
+@import 'commons';
+@import "_fonts";
+@import "_navBar";
+@import "_content";
+@import 'footer';  
+
+
+body{
+    background-image: url(../imagenes/white-paper-crumpled-texture-background-free-photo.jpg);
+    background-attachment: fixed;
+    overflow: auto;
+    box-sizing: border-box;
+    overflow-x: hidden
+}
+

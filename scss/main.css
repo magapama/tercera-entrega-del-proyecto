@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto+Serif:wght@300&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-parrafo {
+  background-color: #ccdde5;
+}
+
+.bg-pie {
+  background-color: rgba(7, 71, 104, 0.5);
+}
+
+.bg-pie h3 {
+  font-size: 1rem;
+  color: #ccdde5;
+}
+
+.btn-gral, .btn-rounded:hover {
+  background-color: #66abb9;
+  border: none;
+  padding: 15px 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: inline-block;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  font-style: bold;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: whitesmoke;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.btn-rounded:hover {
+  border-radius: 8px;
+  background-color: rgba(7, 71, 104, 0.5);
+  cursor: pointer;
+}
+
+.img-gral-border, .img-border-punto {
+  border-color: blue;
+  border-radius: 5px;
+}
+
+.img-border-punto {
+  border-style: dotted;
+  border-color: rgba(7, 71, 104, 0.5), 5;
+}
+
+.textH2, .textItalic {
+  color: rgba(102, 171, 185, 0.5);
+  font-size: 2.5rem;
+}
+
+.textItalic {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: oblique;
+  text-decoration: underline;
+}
+
+.containerFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parrafo {
+  font-size: 16px;
+  line-height: 0.5rem;
+  color: #3ba0b5;
+  text-align: justify;
+  padding: 2px;
+}
+
+.textoH3 {
+  font-size: 2.1rem;
+  color: #074768;
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+}
+
+.gradiente {
+  direction: to left;
+  list: rgba(204, 221, 229, 0.5), whitesmoke;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(204, 221, 229, 0.5)), to(whitesmoke));
+  background: linear-gradient(to left, rgba(204, 221, 229, 0.5), whitesmoke);
+}
+
+.gradiente2:hover {
+  direction: to top;
+  list: rgba(7, 71, 104, 0.5), 25;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(7, 71, 104, 0.5)), to(25));
+  background: linear-gradient(to top, rgba(7, 71, 104, 0.5), 25);
+  color: whitesmoke;
+  cursor: pointer;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+
+.gradiente3:hover {
+  direction: to left;
+  list: rgba(7, 71, 104, 0.5), #074768;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(7, 71, 104, 0.5)), to(#074768));
+  background: linear-gradient(to left, rgba(7, 71, 104, 0.5), #074768);
+  color: whitesmoke;
+  cursor: pointer;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+
+.transform:hover {
+  -webkit-transform: translate(20px, -50px);
+          transform: translate(20px, -50px);
+  cursor: pointer;
+}
+
+.scale:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 3s;
+  transition: -webkit-transform 3s;
+  transition: transform 3s;
+  transition: transform 3s, -webkit-transform 3s;
+}
+
+@-webkit-keyframes textAlpha {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textAlpha {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h2, img, #form {
+  -webkit-animation-name: textAlpha;
+          animation-name: textAlpha;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+figcaption::first-line {
+  color: #3ba0b5;
+}
+
+figcaption::first-letter {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3ba0b5;
+}
+
+p::first-letter {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.encabezadoPpal {
+  background-color: rgba(102, 171, 185, 0.5);
+}
+
+.encabezadoPpal h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #074768;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  .encabezadoPpal h1 {
+    font-size: 2rem;
+  }
+}
+
+.menuUl ul li, .menuUl ul a {
+  color: #074768;
+  text-align: right;
+  font-weight: 500;
+}
+
+.menuUl ul li:hover, .menuUl ul a:hover {
+  color: rgba(7, 71, 104, 0.5);
+  font-weight: 900;
+}
+
+#slogan {
+  border: solid;
+  border-color: blue;
+  border-radius: 30px;
+  margin: 15px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#slogan h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #66abb9;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  #slogan h2 {
+    font-size: 1rem;
+  }
+}
+
+#productos {
+  display: inline;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 5px;
+  padding: 20px 20px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#productos h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #66abb9;
+  margin: 15px;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  #productos h2 {
+    font-size: 1rem;
+  }
+}
+
+#productos section {
+  margin-left: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+}
+
+#productos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  float: left;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 200px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  #productos div {
+    margin-left: 30px;
+  }
+}
+
+#productos a {
+  border: solid;
+  border-color: blue;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 2px;
+}
+
+#boton {
+  background-color: #66abb9;
+  border-radius: 8px;
+  border: none;
+  padding: 15px 20px;
+  margin-top: 30px;
+  margin-left: 700px;
+  text-align: center;
+  display: inline-block;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  font-style: bold;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  #boton {
+    margin-left: 50px;
+  }
+}
+
+#boton a {
+  color: whitesmoke;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#parrafo h2, #parrafo2 h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #66abb9;
+  margin: 15px;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  #parrafo h2, #parrafo2 h2 {
+    font-size: 1rem;
+  }
+}
+
+#footer {
+  padding-left: 10px;
+  display: inline-block;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  width: 100%;
+  height: 90px;
+  padding-top: 10px;
+}
+
+#footer h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #ccdde5;
+}
+
+#footer div {
+  display: inline-block;
+  margin: 10px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+#footer img {
+  border: 30px, solid;
+  border-radius: 50px;
+}
+
+body {
+  background-image: url(../imagenes/white-paper-crumpled-texture-background-free-photo.jpg);
+  background-attachment: fixed;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+/*# sourceMappingURL=main.css.map */

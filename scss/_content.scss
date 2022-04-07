@@ -1,0 +1,113 @@
+//index
+
+
+#slogan{
+    // display: inline-block;
+    border: solid;
+    border-color: blue;
+    border-radius: 30px;
+    margin: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+   
+    h2{
+        text-align: $textCenter; 
+        font-size: $textPqno;
+        color: $keyColor3;
+        font-weight: $textNegrita; 
+
+        @media only screen and (min-width:280px) and (max-width:600px){
+            font-size: $textMuyPeqno;
+            
+        }  
+     }
+}
+
+#productos{
+    display:inline;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 5px;
+    padding: 20px 20px ;
+    overflow: hidden;
+    box-sizing: border-box;
+    h2{
+        text-align: $textCenter; 
+        font-size: $textPqno;
+        color: $keyColor3;
+        margin: 15px;
+        padding: 10px;
+        
+    @media only screen and (min-width:280px) and (max-width:600px){
+        font-size: $textMuyPeqno;            
+    }  
+    }
+    section{
+        margin-left: auto;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        float: left;
+        text-align: $textCenter; 
+        box-sizing: border-box;
+        margin-left: 200px;
+        
+        @media only screen and (min-width:280px) and (max-width:600px){
+            margin-left: 30px;
+                
+        }  
+    }
+    a{
+        border: solid;
+        border-color: blue;
+        border-radius: 8px;
+        margin: 20px;
+        padding: 2px ;
+    }
+}
+
+#boton{
+    background-color: $keyColor3;
+    border-radius: 8px;
+    border: none;
+    padding: 15px 20px;
+    margin-top: 30px;
+    margin-left: 700px;
+    text-align: $textCenter;
+    display: inline-block;
+    align-content: center;
+    justify-content:center;
+    align-items: center;
+    font-size: $textMuyPeqno;
+    font-style: $textNegrita;
+    vertical-align:middle;
+    box-sizing: border-box;
+    
+    @media only screen and (min-width:280px) and (max-width:600px){
+        margin-left: 50px;            
+    }  
+    a{
+        color: whitesmoke;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+}
+#parrafo, #parrafo2{
+    h2{
+        text-align: $textCenter; 
+        font-size: $textPqno;
+        color: $keyColor3;
+        margin: 15px;
+        padding: 10px;
+        
+        @media only screen and (min-width:280px) and (max-width:600px){
+        font-size: $textMuyPeqno;            
+        }  
+    } 
+}
+
